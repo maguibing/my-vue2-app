@@ -15,24 +15,6 @@
       </div>
       <div class="item">
       </div>
-      <div class="item">
-      </div>
-      <div class="item">
-      </div>
-      <div class="item">
-      </div>
-      <div class="item">
-      </div>
-      <div class="item">
-      </div>
-      <div class="item">
-      </div>
-      <div class="item">
-      </div>
-      <div class="item">
-      </div>
-      <div class="item">
-      </div>
       <i></i>
       <i></i>
       <i></i>
@@ -44,6 +26,7 @@
 
 <script>
 export default {
+
   name: "HelloWorld",
 
 }
@@ -57,22 +40,20 @@ export default {
   margin: 0;
 }
 main {
-  margin: 20px 0 0;
-  padding: 0 50px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 .item {
-  margin-bottom: 15px;
+  margin: 0 15px 15px;
   width: 300px;
   height: 500px;
   border: 1px solid black;
 }
 
 .movie-container > i {
-  margin-bottom: 15px;
+  margin: 0 15px 15px;
   width: 300px;
   border: 1px solid transparent;
 }

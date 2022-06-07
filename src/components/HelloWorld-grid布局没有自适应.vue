@@ -23,27 +23,13 @@
       </div>
       <div class="item">
       </div>
-      <div class="item">
-      </div>
-      <div class="item">
-      </div>
-      <div class="item">
-      </div>
-      <div class="item">
-      </div>
-      <div class="item">
-      </div>
-      <i></i>
-      <i></i>
-      <i></i>
-      <i></i>
-      <i></i>
     </main>
   </div>
 </template>
 
 <script>
 export default {
+
   name: "HelloWorld",
 
 }
@@ -56,24 +42,25 @@ export default {
   padding: 0;
   margin: 0;
 }
-main {
-  margin: 20px 0 0;
-  padding: 0 50px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.item {
-  margin-bottom: 15px;
-  width: 300px;
-  height: 500px;
+.movie-container {
+  padding: 20px;
+  //   width: 800px;
   border: 1px solid black;
-}
+  margin: 0 auto;
+  margin-bottom: 50px;
 
-.movie-container > i {
-  margin-bottom: 15px;
-  width: 300px;
-  border: 1px solid transparent;
+  /** key words*/
+  display: grid;
+  /**指定重复元素的宽度*/
+  grid-template-columns: repeat(auto-fill, 300px);
+  justify-content: space-between;
+  grid-gap: 1rem;
+}
+.movie-container .item {
+  display: inline-block;
+  height: 50px;
+  border: 1px solid green;
+  text-align: center;
+  line-height: 50px;
 }
 </style>
