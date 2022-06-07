@@ -1,70 +1,95 @@
 <template>
-  <div>
-    {{msg}}
-    <h1>{{$store.state.son.msg}}</h1>
-    <button @click="incre">annuity</button>
-    <router-link to="/profile">这里</router-link>
-
-    <div class="box">
-      <router-view></router-view>
-    </div>
+  <div class="movie-container">
+    <main>
+      <div class="item">
+      </div>
+      <div class="item">
+      </div>
+      <div class="item">
+      </div>
+      <div class="item">
+      </div>
+      <div class="item">
+      </div>
+      <div class="item">
+      </div>
+      <div class="item">
+      </div>
+      <div class="item">
+      </div>
+    </main>
   </div>
 </template>
-<script>
-import mix from '@/assets/mixin.js'
-import { mapMutations } from 'vuex'
 
+<script>
 export default {
 
-  name: 'HelloWorld',
-  mixins: [mix],
-
-  props: {
-    msg: {
-      type: String,
-      default: "default"
-    }
-  },
+  name: "HelloWorld",
 
   data () {
     return {
-      goal: {
-        a: "zs", n: "ls"
-      }
+      num: 5,
+      clientWidth: document.documentElement.clientWidth
     }
   },
 
   methods: {
-    ...mapMutations('son', ["changeStr"]),
+    // setAttr () {
+    //   let parentDom = document.querySelector('main');
+    //   let children = parentDom.children;
+    //   let n = children.length % this.num;
+    //   if (n) {
+    //     while (3 - n > 0) {
+    //       let div = document.createElement('div');
+    //       div.className = 'item';
+    //       div.style.visibility = 'hidden';
+    //       parentDom.appendChild(div);
+    //       n++;
+    //     }
+    //   }
+    // }
+  },
 
-    incre: function () {
-
-      console.log(this.$qs.parse(this.$qs.stringify(this.goal)))
-
-      this.changeStr()
-
-      this.$router.push('/login')
-    }
+  mounted () {
+    // let _this = this
+    // window.addEventListener('resize', function () {
+    //   _this.clientWidth = document.body.clientWidth;
+    // })
   },
 
   watch: {
-    "$route": {
-      deep: true,
-      immediate: true,
-      handler (to, from) {
-        console.log(to, from)
-      }
-    }
+    // clientWidth (n) {
+    //   if (n >= 1677) {
+    //     this.num = 5
+    //     this.setAttr()
+    //   } else if (n >= 1345) {
+    //     this.num = 4
+    //     this.setAttr()
+    //   }
+    // }
   }
-
-
 }
+
+
 </script>
 
-<style lang="scss" scoped>
-.box {
-  width: 600px;
-  height: 600px;
+<style lang='scss'  >
+* {
+  padding: 0;
+  margin: 0;
+}
+main {
+  //   margin-left: 120px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.item {
+  flex: 0 0 20%;
+  margin: 15px;
+  width: 300px;
+  height: 500px;
   border: 1px solid black;
 }
 </style>
