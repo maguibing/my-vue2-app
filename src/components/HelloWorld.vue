@@ -43,7 +43,7 @@ export default {
 
       this.changeStr()
 
-      this.$router.push('/profile')
+      this.$router.push('/login')
     }
   },
 
