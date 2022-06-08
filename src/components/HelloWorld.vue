@@ -1,12 +1,14 @@
 <template>
-  <div class="box">
-    <div class="item item-one">1</div>
-    <div class="item">2</div>
-    <div class="item">3</div>
-    <div class="item item-four">4</div>
-    <div class="item">5</div>
-    <div class="item">6</div>
-    <div class="item item-self">7</div>
+  <div class="container">
+    <div class="box box-1">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+    <div class="box">9</div>
   </div>
 </template>
 
@@ -17,34 +19,39 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-* {
-  margin: 0;
-  padding: 0;
-}
-.box {
+.container {
   display: grid;
-  width: 600px;
-  margin: 0 auto;
-  grid-template-columns: [c1] 100px [c2] 100px [c3] auto [c4];
-  grid-template-rows: [x1] 100px [x2] 100px [x3] auto [x4];
-  gap: 10px 20px;
-  grid-auto-rows: 50px;
-  grid-template-areas:
-    "a . c"
-    "d . f"
-    "g . i";
-  .item {
-    height: 100px;
-    background-color: blueviolet;
-  }
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+}
 
-  .item-self {
-    grid-column-start: 2;
-    grid-column-end: 4;
+.box {
+  font-size: 4em;
+  text-align: center;
+  background-color: #c077af;
+  border: 1px solid #e5e4e9;
+}
+
+.box-1 {
+  background-color: #0376c2;
+  grid-area: 1 / 1 / 3 / 3;
+}
+
+@media screen and (max-width: 1500px) {
+  .box {
+    background-color: #0376c2;
   }
-  .item-one {
-    grid-column-start: 1;
-    grid-column-end: 3;
+}
+
+@media screen and (max-width: 1000px) {
+  .box {
+    background-color: #4dac75;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .box {
+    background-color: #eee67a;
   }
 }
 </style>
