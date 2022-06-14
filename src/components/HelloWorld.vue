@@ -21,8 +21,8 @@ export default {
 <style lang="scss" scoped>
 .container {
   display: grid;
-  grid-template-columns: 100px 100px 100px;
   grid-template-rows: 100px 100px 100px;
+  grid-template-columns: 100px 100px 100px;
 }
 
 .box {
@@ -37,21 +37,10 @@ export default {
   grid-area: 1 / 1 / 3 / 3;
 }
 
-@media screen and (max-width: 1500px) {
-  .box {
-    background-color: #0376c2;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .box {
-    background-color: #4dac75;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .box {
-    background-color: #eee67a;
+@media screen and (max-width: 1200px) {
+  .box-1 {
+    background-color: red;
+    grid-area: 1 / 1 / 4 / 2;
   }
 }
 </style>

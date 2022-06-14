@@ -1,4 +1,5 @@
-import HelloWorld from '@/components/HelloWorld.vue'
+// import HelloWorld from '@/components/HelloWorld.vue'
+import Index from '@/components/index.vue'
 import Login from '@/components/Login.vue'
 import UserProfile from '@/components/UserProfile.vue'
 import NProgress from '@/assets/nprogress'
@@ -9,7 +10,7 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    component: HelloWorld,
+    component: Index,
     children: [
       {
         path: '/profile',
