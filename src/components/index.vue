@@ -24,14 +24,14 @@ export default {
       const point = new $map.Point(121.498758, 31.191931)
 
       // create point
-      const myIcon = new window.BMapGL.Icon(this.img, new window.BMapGL.Size(20, 25));
-      const pt = new window.BMapGL.Point(121.498758, 31.191931);
-      const marker = new window.BMapGL.Marker(pt, { icon: myIcon });
+      const myIcon = new $map.Icon(this.img, new $map.Size(20, 25));
+      const pt = new $map.Point(121.498758, 31.191931);
+      const marker = new $map.Marker(pt, { icon: myIcon });
 
       // company logo
-      const mycompanyIcon = new window.BMapGL.Icon(this.companySrc, new window.BMapGL.Size(200, 156));
-      const mycompanyPt = new window.BMapGL.Point(121.498794, 31.194697);
-      const mycompanyMarks = new window.BMapGL.Marker(mycompanyPt, { icon: mycompanyIcon });
+      const mycompanyIcon = new $map.Icon(this.companySrc, new $map.Size(200, 156));
+      const mycompanyPt = new $map.Point(121.498794, 31.194697);
+      const mycompanyMarks = new $map.Marker(mycompanyPt, { icon: mycompanyIcon });
 
       // 将标注添加到地图
       map.addOverlay(marker);
